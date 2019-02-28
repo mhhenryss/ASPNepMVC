@@ -1,0 +1,41 @@
+﻿@model MVSSka.Models.TranslationData
+@{
+    Layout = null;
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th>類別X</th>
+                <th>日期X</th>
+                <th>金額X</th>
+            </tr>
+            
+            @for (var i = 0; i < 50; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@Model.Datas[i].Type</td>
+                        <td>@Model.Datas[i].DateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@Model.Datas[i].Price.ToString("##,###")</td>
+                    </tr>
+                }
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+@*@foreach (var data in Model)
+    {
+        <td>@data.Price</td>
+        <td>@data.Price</td>
+        <td>@data.Price</td>
+        <td>@data.Price</td>
+    }*@
